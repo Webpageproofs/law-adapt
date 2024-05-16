@@ -1635,6 +1635,12 @@ textarea:focus::placeholder {
   height: 50px;
   flex: 0 0 auto;
 }
+@media (max-width: 400px) {
+  .footer-social .menu__li {
+    width: 35px;
+    height: 35px;
+  }
+}
 
 @media (max-width: 590px) {
   .footer-social .menu__li {
@@ -2353,6 +2359,7 @@ textarea:focus::placeholder {
 .main-nav-box {
   transition: all 0.3s ease 0s;
   position: fixed;
+  transform: translate(150%, 0);
   right: 17px;
   top: 40%;
   z-index: 9;
@@ -2525,6 +2532,7 @@ textarea:focus::placeholder {
     left: 0;
     width: 100%;
     transform: none;
+    z-index: 10;
   }
 }
 .mission {
@@ -3635,6 +3643,7 @@ textarea:focus::placeholder {
   transition: all 0.3s ease 0s;
   width: 770px;
   position: fixed;
+  transform: translate(0, 150%);
   z-index: 5;
   left: 60px;
   bottom: 20px;
@@ -6080,6 +6089,7 @@ textarea:focus::placeholder {
 }
 @media (max-width: 900px) {
   .help__item {
+    padding-top: 20px;
     padding-bottom: 30px;
   }
 }
@@ -6167,6 +6177,11 @@ textarea:focus::placeholder {
   width: 633px;
   margin-right: 32px;
   padding-bottom: 55px;
+}
+@media (max-width: 1600px) {
+  .help-col:nth-child(1) {
+    padding-bottom: 30px;
+  }
 }
 
 @media (max-width: 1700px) {
@@ -6724,6 +6739,11 @@ span {
     padding: 30px;
   }
 }
+@media (max-width: 1366px) {
+  .law-price-direction {
+    padding: 20px;
+  }
+}
 
 @media (max-width: 1010px) {
   .law-price-direction {
@@ -6751,9 +6771,9 @@ span {
     height: 465px;
   }
 }
-@media (max-width: 1010px) {
+@media (max-width: 1366px) {
   .law-price-direction-item {
-    height: 330px;
+    height: 350px;
   }
 }
 @media (max-width: 767px) {
@@ -6953,9 +6973,14 @@ span {
   position: relative;
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1600px) {
   .law-price-question {
     padding: 30px;
+  }
+}
+@media (max-width: 1366px) {
+  .law-price-question {
+    padding: 20px;
   }
 }
 @media (max-width: 576px) {
@@ -7010,6 +7035,10 @@ span {
   margin-right: 40px;
 }
 
+.law-price-question-item .btn-main {
+  padding: 35px 48px;
+  margin-top: 20px;
+}
 @media (max-width: 1630px) {
   .law-price-question-item .btn-main {
     width: 100%;
@@ -7017,9 +7046,22 @@ span {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 25px;
+    padding: 22px;
+    border-radius: 15px;
   }
 }
+@media (max-width: 576px) {
+  .law-price-question-item .btn-main {
+    font-size: 10px;
+    padding: 17px 15px;
+    border-radius: 10px;
+  }
+  .law-price-question-item .btn-main .btn-main-img {
+    width: 15px;
+    margin-right: 10px;
+  }
+}
+
 @media (max-width: 1250px) {
   .law-price-question-item .btn-main {
     width: 50%;
@@ -7040,22 +7082,6 @@ span {
     border-radius: 15px;
   }
 }
-.law-price-question-item .btn-main {
-  padding: 35px 48px;
-  margin-top: 20px;
-}
-@media (max-width: 576px) {
-  .law-price-question-item .btn-main {
-    font-size: 10px;
-    padding: 17px 15px;
-    border-radius: 10px;
-  }
-  .law-price-question-item .btn-main .btn-main-img {
-    width: 15px;
-    margin-right: 10px;
-  }
-}
-
 .law-price-question-item .header-social {
   margin-bottom: 0;
 }
@@ -9654,14 +9680,26 @@ span {
   height: 150px;
   margin-right: 30px;
 }
-
-@media (max-width: 460px) {
+@media (max-width: 1600px) {
   .partners .places-slider-col {
-    height: auto;
-    margin-right: 0;
-    width: 100%;
+    width: 300px;
+    height: 120px;
   }
 }
+@media (max-width: 1366px) {
+  .partners .places-slider-col {
+    width: 200px;
+    height: 80px;
+  }
+}
+@media (max-width: 576px) {
+  .partners .places-slider-col {
+    width: 150px;
+    height: 60px;
+    margin-right: 15px;
+  }
+}
+
 .partners .places-slider-item {
   flex: 1 1 auto;
   border-radius: 20px;
@@ -9670,6 +9708,17 @@ span {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 1366px) {
+  .partners .places-slider-item {
+    border-radius: 15px;
+    padding: 20px 15px;
+  }
+}
+@media (max-width: 576px) {
+  .partners .places-slider-item {
+    border-radius: 10px;
+  }
 }
 
 @media (max-width: 1786px) {
@@ -10539,11 +10588,10 @@ span {
 .tel__img i {
   transition: all 0.3s ease 0s;
   content: "";
-  display: inline-block;
   width: 16px;
   height: 2rem;
   background-color: #347d98;
-  -webkit-mask: url("../img/icons/tel.svg") no-repeat center/contain;
+  -webkit-mask: url("../img/icons/tel-white.svg") no-repeat center/contain;
 }
 
 .tel .header-tel {
@@ -10626,6 +10674,12 @@ span {
 .contacts-s .header-social .menu__li {
   width: 50px;
   height: 50px;
+}
+@media (max-width: 767px) {
+  .contacts-s .header-social .menu__li {
+    width: 35px;
+    height: 35px;
+  }
 }
 
 .contacts-s .header-social .menu__li:not(:last-child) {
