@@ -3190,7 +3190,7 @@ textarea:focus::placeholder {
 
 .popup__content .form__ch:checked + label::before {
   background-color: #347d98;
-  background-image: url("../img/icons/w-check.png");
+  background-image: url("../img/icons/w-check.svg");
   background-size: 10px;
   background-repeat: no-repeat;
   background-position: center;
@@ -3875,7 +3875,18 @@ textarea:focus::placeholder {
   margin: 0 15px;
   margin-bottom: 15px;
 }
-
+@media (max-width: 1366px) {
+  .btns-box {
+    margin: 0 10px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 990px) {
+  .btns-box {
+    margin: 0 5px;
+    margin-bottom: 10px;
+  }
+}
 @media (max-width: 576px) {
   .btns-box {
     width: 100%;
@@ -3883,11 +3894,8 @@ textarea:focus::placeholder {
     align-items: center;
     justify-content: center;
   }
-  .btns-box {
-    margin: 0 10px;
-    margin-bottom: 15px;
-  }
 }
+
 .btn-white {
   text-align: center;
   padding: 25px 40px;
@@ -3901,7 +3909,13 @@ textarea:focus::placeholder {
 }
 @media (max-width: 1600px) {
   .btn-white {
-    padding: 20px 30px;
+    padding: 18px 30px;
+  }
+}
+@media (max-width: 1366px) {
+  .btn-white {
+    padding: 16px 20px;
+    font-size: 14px;
   }
 }
 @media (max-width: 990px) {
@@ -3910,17 +3924,24 @@ textarea:focus::placeholder {
     border-radius: 10px;
   }
 }
+@media (max-width: 767px) {
+  .btn-white {
+    padding: 12px 14px;
+    border-radius: 6px;
+    font-size: 10px;
+  }
+}
+@media (max-width: 576px) {
+  .btn-white {
+    padding: 10px 13px;
+  }
+}
 
 .btn-white:hover {
   color: #fff;
   background-color: #347d98;
 }
 
-@media (max-width: 767px) {
-  .btn-white {
-    padding: 17px 20px;
-  }
-}
 .btn-green {
   padding: 25px 40px;
   text-transform: uppercase;
@@ -4527,11 +4548,6 @@ textarea:focus::placeholder {
     padding-bottom: 50px;
   }
 }
-@media (max-width: 1280px) {
-  .download-img {
-    z-index: -1;
-  }
-}
 .download-img {
   position: absolute;
   z-index: 2;
@@ -4540,6 +4556,11 @@ textarea:focus::placeholder {
   transform: translate(0, -50%);
   width: 57.8125vw;
   flex: 0 0 auto;
+}
+@media (max-width: 1280px) {
+  .download-img {
+    z-index: -1;
+  }
 }
 @media (max-width: 900px) {
   .download-img {
@@ -18287,16 +18308,89 @@ body {
   max-width: 100%;
 }
 
+.arg .btns-row {
+  margin-bottom: 30px;
+}
+@media (max-width: 1600px) {
+  .arg .btns-row {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 1366px) {
+  .arg .btns-row {
+    margin-bottom: 10px;
+  }
+}
+.arg .btns-box {
+  margin-bottom: 30px;
+}
+@media (max-width: 1600px) {
+  .arg .btns-box {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 990px) {
+  .arg .btns-box {
+    margin-bottom: 10px;
+  }
+}
 .arg-box {
   color: #fff;
   display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+@media (max-width: 990px) {
+  .arg-box {
+    flex-wrap: wrap;
+  }
 }
 
 .arg-box-l {
   border-radius: 20px;
   background-color: #3a4156;
   padding: 40px;
+  padding-right: 60px;
   position: relative;
+  height: 770px;
+  overflow: hidden;
+}
+@media (max-width: 1600px) {
+  .arg-box-l {
+    padding: 30px;
+    padding-right: 50px;
+    height: 640px;
+  }
+}
+@media (max-width: 1366px) {
+  .arg-box-l {
+    padding-left: 15px;
+    padding-top: 20px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    height: 630px;
+  }
+}
+@media (max-width: 990px) {
+  .arg-box-l {
+    padding-right: 15px;
+    height: 415px;
+  }
+}
+.arg-box-l h3 {
+  font-size: 19px;
+  margin-bottom: 20px;
+}
+@media (max-width: 576px) {
+  .arg-box-l h3 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 500px) {
+  .arg-box-l h3 {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
 }
 .arg-box-l::after {
   content: "";
@@ -18305,21 +18399,143 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
+  z-index: 2;
   border-radius: 0 0 20px 20px;
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#3a4156+0,3a4156+49,3a4156+100&0+0,0.83+49,1+100 */
   background: linear-gradient(to bottom, rgba(58, 65, 86, 0) 0%, rgba(58, 65, 86, 0.83) 49%, rgb(58, 65, 86) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
+.arg-box-list {
+  position: relative;
+  overflow-y: auto;
+  width: 100%;
+  height: 630px;
+}
+@media (max-width: 1600px) {
+  .arg-box-list {
+    height: 520px;
+  }
+}
+@media (max-width: 990px) {
+  .arg-box-list {
+    height: 300px;
+  }
+}
+.arg-box-list::-webkit-scrollbar {
+  width: 5.5px;
+  margin-left: 35px;
+}
+.arg-box-list::-webkit-scrollbar-track {
+  background: #3a4156; /* цвет дорожки */
+}
+.arg-box-list::-webkit-scrollbar-thumb {
+  background-color: #fff; /* цвет плашки */
+  border-radius: 20px; /* закругления плашки */
+  border: 2px solid #3a4156; /* в ширину width: 21.5px; вхоит border*/
+}
+
 .arg-point {
   display: flex;
+  z-index: 3;
+  margin-right: 35px;
+}
+@media (max-width: 1600px) {
+  .arg-point {
+    margin-right: 25px;
+  }
+}
+@media (max-width: 990px) {
+  .arg-point {
+    margin-right: 10px;
+  }
+}
+@media (max-width: 400px) {
+  .arg-point {
+    display: block;
+  }
+  .arg-point .arg-point__num {
+    float: left;
+  }
+}
+.arg-point:not(:last-child) {
+  margin-bottom: 30px;
+}
+@media (max-width: 1600px) {
+  .arg-point:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+.arg-point:not(:last-child) .arg-point__num {
+  position: relative;
+}
+.arg-point:not(:last-child) .arg-point__num::before {
+  content: "";
+  width: 1px;
+  height: 250%;
+  position: absolute;
+  background-color: #49a0c1;
+  bottom: -250%;
+  left: 50%;
+  z-index: -1;
+}
+@media (max-width: 990px) {
+  .arg-point:not(:last-child) .arg-point__num::before {
+    height: 350%;
+    bottom: -350%;
+  }
+}
+@media (max-width: 400px) {
+  .arg-point:not(:last-child) .arg-point__num::before {
+    display: none;
+  }
+}
+.arg-point:first-child .arg-point__num::after {
+  display: none;
 }
 .arg-point__num {
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  font-size: 19px;
   color: #fff;
   background-color: #49a0c1;
   margin-right: 20px;
+  font-weight: 700;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 576px) {
+  .arg-point__num {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    font-size: 12px;
+  }
+}
+.arg-point__num::after {
+  content: "";
+  width: 1px;
+  height: 250%;
+  position: absolute;
+  background-color: #49a0c1;
+  top: -250%;
+  left: 50%;
+  z-index: -1;
+}
+@media (max-width: 990px) {
+  .arg-point__num::after {
+    height: 350%;
+    bottom: -350%;
+  }
+}
+@media (max-width: 400px) {
+  .arg-point__num::after {
+    display: none;
+  }
 }
 .arg-point__text h4 {
   font-weight: 700;
@@ -18327,28 +18543,425 @@ body {
   font-size: 22px;
   margin-bottom: 15px;
 }
+@media (max-width: 1600px) {
+  .arg-point__text h4 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 990px) {
+  .arg-point__text h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 576px) {
+  .arg-point__text h4 {
+    font-size: 14px;
+  }
+}
 .arg-point__text p {
   font-family: "Inter";
   font-size: 20px;
 }
+@media (max-width: 1600px) {
+  .arg-point__text p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 990px) {
+  .arg-point__text p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 576px) {
+  .arg-point__text p {
+    font-size: 12px;
+  }
+}
 
 .arg-box-r {
+  width: 377px;
   padding: 30px 20px 25px 20px;
   border-radius: 20px;
   background-color: #347d98;
   position: relative;
   z-index: 2;
+  top: 30px;
+  left: -30px;
+  flex: 1 0 auto;
+}
+@media (max-width: 1600px) {
+  .arg-box-r {
+    padding-top: 20px;
+  }
+}
+@media (max-width: 990px) {
+  .arg-box-r {
+    width: 100%;
+    left: 0;
+    top: auto;
+    margin-top: 30px;
+  }
+}
+.arg-box-r h3 {
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 130%;
+}
+@media (max-width: 1600px) {
+  .arg-box-r h3 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 990px) {
+  .arg-box-r h3 {
+    font-size: 18px;
+  }
+}
+@media (max-width: 767px) {
+  .arg-box-r h3 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 576px) {
+  .arg-box-r h3 {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+}
+.arg-box-r .btn-main {
+  padding: 0;
+  background: #347d98;
+  font-weight: 400;
+  font-size: 18px;
+  font-family: "Inter";
+  border-radius: 0;
+}
+@media (max-width: 1600px) {
+  .arg-box-r .btn-main {
+    font-size: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .arg-box-r .btn-main {
+    font-size: 14px;
+  }
+}
+@media (max-width: 576px) {
+  .arg-box-r .btn-main {
+    font-size: 12px;
+  }
+}
+
+.arg-read-list {
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  border-bottom: 1.5px solid #fff;
+}
+@media (max-width: 767px) {
+  .arg-read-list {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+  }
 }
 
 .arg-read-point {
   display: flex;
   align-items: center;
 }
+.arg-read-point:not(:last-child) {
+  margin-bottom: 15px;
+}
+@media (max-width: 767px) {
+  .arg-read-point:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
 .arg-read-point__img {
   width: 12px;
   flex: 0 0 auto;
   margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .arg-read-point__img img {
   max-width: 100%;
+}
+.arg-read-point__text {
+  font-family: "Inter";
+  font-size: 20px;
+}
+@media (max-width: 767px) {
+  .arg-read-point__text {
+    font-size: 18px;
+  }
+}
+@media (max-width: 576px) {
+  .arg-read-point__text {
+    font-size: 14px;
+  }
+}
+
+.arg-case-link {
+  text-transform: uppercase;
+  font-family: "Inter";
+  margin-bottom: 25px;
+  font-size: 18px;
+}
+@media (max-width: 1600px) {
+  .arg-case-link {
+    font-size: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .arg-case-link {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 576px) {
+  .arg-case-link {
+    font-size: 12px;
+  }
+}
+
+.nal-sf {
+  padding-bottom: 40px;
+}
+@media (max-width: 990px) {
+  .nal-sf {
+    padding-bottom: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .nal-sf {
+    padding-bottom: 0;
+  }
+}
+.nal-sf .services-head {
+  max-width: 990px;
+  margin: 0 auto;
+}
+.nal-sf .services-head h3 {
+  margin-bottom: 50px;
+}
+@media (max-width: 1366px) {
+  .nal-sf .services-head h3 {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 990px) {
+  .nal-sf .services-head h3 {
+    margin-bottom: 30px;
+  }
+}
+
+.nal-sf-img-wr {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  height: 100%;
+}
+@media (max-width: 990px) {
+  .nal-sf-img-wr {
+    top: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .nal-sf-img-wr {
+    width: 200px;
+    height: 100px;
+    border-radius: 20px;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.nal-sf-ttx-wr {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width: 767px) {
+  .nal-sf-ttx-wr {
+    justify-content: center;
+  }
+}
+
+.nal-sf-row {
+  position: relative;
+}
+@media (max-width: 767px) {
+  .nal-sf-row {
+    margin-top: 80px;
+  }
+}
+
+.nal-sf-img {
+  position: relative;
+  border-radius: 25px;
+  width: 53%;
+  height: 100%;
+}
+@media (max-width: 990px) {
+  .nal-sf-img {
+    border-radius: 20px;
+  }
+}
+@media (max-width: 1366px) {
+  .nal-sf-img {
+    width: 43%;
+  }
+}
+@media (max-width: 767px) {
+  .nal-sf-img {
+    width: 100%;
+  }
+}
+.nal-sf-img img {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+}
+@media (max-width: 990px) {
+  .nal-sf-img img {
+    border-radius: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .nal-sf-img img {
+    border-radius: 10px;
+  }
+}
+
+.nal-sf-ttx {
+  width: 50%;
+  padding: 40px 40px 40px 70px;
+  border-radius: 25px;
+  font-family: "Inter";
+  font-size: 20px;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,dadff0+100 */
+  background: linear-gradient(to bottom, #ffffff 0%, #dadff0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  color: #222126;
+}
+@media (max-width: 1600px) {
+  .nal-sf-ttx {
+    font-size: 18px;
+    padding: 30px;
+    padding-left: 60px;
+  }
+}
+@media (max-width: 1366px) {
+  .nal-sf-ttx {
+    width: 60%;
+  }
+}
+@media (max-width: 990px) {
+  .nal-sf-ttx {
+    font-size: 15px;
+    padding: 20px;
+    padding-left: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .nal-sf-ttx {
+    width: 100%;
+    padding: 20px;
+    padding-top: 70px;
+  }
+}
+@media (max-width: 576px) {
+  .nal-sf-ttx {
+    padding: 20px 15px;
+    padding-top: 70px;
+    font-size: 14px;
+    border-radius: 15px;
+  }
+}
+.nal-sf-ttx p:not(:last-child) {
+  margin-bottom: 30px;
+}
+@media (max-width: 1600px) {
+  .nal-sf-ttx p:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 990px) {
+  .nal-sf-ttx p:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+.choise-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.choise-col {
+  display: flex;
+  flex: 0 1 50%;
+  max-width: 50%;
+  padding: 0 15px;
+  margin-bottom: 30px;
+}
+
+.choise-item {
+  padding: 30px;
+  position: relative;
+  border-radius: 20px;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,dadff0+100 */
+  background: linear-gradient(to bottom, #ffffff 0%, #dadff0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+@media (max-width: 1366px) {
+  .choise-item {
+    padding: 20px;
+  }
+}
+
+.choise-point {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.choise-point__img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #49a0c1;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.choise-point__img img {
+  width: 22px;
+}
+.choise-point__text {
+  font-weight: 700;
+  line-height: 120%;
+  font-size: 25px;
+}
+
+.choise-ttx {
+  font-family: "Inter";
+  font-size: 18px;
+}
+.choise-ttx p:not(:last-child) {
+  margin-bottom: 20px;
+}
+@media (max-width: 1600px) {
+  .choise-ttx p:not(:last-child) {
+    margin-bottom: 15px;
+  }
 }
