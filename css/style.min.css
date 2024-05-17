@@ -4544,6 +4544,16 @@ textarea:focus::placeholder {
     padding-top: 30px;
   }
 }
+@media (max-width: 990px) {
+  .download-row {
+    padding-bottom: 70px;
+  }
+}
+@media (max-width: 767px) {
+  .download-row {
+    padding-bottom: 50px;
+  }
+}
 @media (max-width: 900px) {
   .download-row {
     display: flex;
@@ -4863,7 +4873,8 @@ textarea:focus::placeholder {
     margin-bottom: 70px;
   }
   .resolved-col:nth-child(3) {
-    display: none;
+    flex: 0 1 100%;
+    max-width: 100%;
   }
 }
 @media (max-width: 950px) {
@@ -5209,6 +5220,28 @@ textarea:focus::placeholder {
 @media (max-width: 576px) {
   .free-cons-l {
     margin-top: -20px;
+  }
+}
+
+.l-minimum {
+  padding-top: 70px;
+  margin-top: -70px;
+}
+@media (max-width: 767px) {
+  .l-minimum {
+    padding-top: 50px;
+    margin-top: -50px;
+  }
+}
+
+.l-lawyers {
+  padding-top: 70px;
+  margin-top: -70px;
+}
+@media (max-width: 576px) {
+  .l-lawyers {
+    padding-top: 50px;
+    margin-top: -50px;
   }
 }
 
@@ -7840,20 +7873,6 @@ span {
   overflow: hidden;
 }
 
-.places__wrapp {
-  padding-bottom: 80px;
-}
-
-@media (max-width: 900px) {
-  .places__wrapp {
-    padding-bottom: 30px;
-  }
-}
-@media (max-width: 767px) {
-  .places__wrapp {
-    padding-bottom: 10px;
-  }
-}
 .places-slider {
   width: 100%;
 }
@@ -8019,21 +8038,10 @@ span {
 .lawyers .letters {
   position: absolute;
   left: 0;
-  top: -20px;
+  top: 0;
 }
 
-@media (max-width: 990px) {
-  .lawyers .letters {
-    top: -10px;
-  }
-}
-@media (max-width: 400px) {
-  .lawyers .letters {
-    top: 20px;
-  }
-}
 .lawyers__wrapp {
-  padding-top: 70px;
   padding-bottom: 100px;
   position: relative;
 }
@@ -10295,32 +10303,26 @@ span {
   }
 }
 .office {
-  padding-top: 60px;
   position: relative;
   overflow-x: hidden;
 }
 
 .office .letters {
   position: absolute;
-  top: 25px;
+  top: -20px;
   left: 0;
+  width: 100%;
+}
+@media (max-width: 990px) {
+  .office .letters {
+    top: 0;
+  }
 }
 
 .office .office__wrapp {
   position: relative;
-  padding-top: 90px;
 }
 
-@media (max-width: 900px) {
-  .office .office__wrapp {
-    padding-top: 40px;
-  }
-}
-@media (max-width: 767px) {
-  .office .office__wrapp {
-    padding-top: 10px;
-  }
-}
 .office .places-slider-item {
   padding: 0;
   width: 100%;
@@ -11374,20 +11376,10 @@ span {
 .minimum-bis .letters {
   position: absolute;
   left: 0;
-  top: 50px;
+  top: 0;
   width: 100%;
 }
 
-@media (max-width: 950px) {
-  .minimum-bis .letters {
-    top: 30px;
-  }
-}
-@media (max-width: 767px) {
-  .minimum-bis .letters {
-    top: 10px;
-  }
-}
 .pad-150 {
   padding-top: 150px;
   padding-bottom: 150px;
@@ -11477,15 +11469,6 @@ span {
   z-index: -1;
 }
 
-.office-bis {
-  margin-top: -100px;
-}
-
-@media (max-width: 767px) {
-  .office-bis {
-    margin-top: -70px;
-  }
-}
 .seo-text__body {
   color: #fff;
 }
@@ -11806,10 +11789,6 @@ span {
   left: 0;
   width: 100%;
   z-index: -2;
-}
-
-.ser-sin-resolved .resolved__wrapp {
-  padding-bottom: 0;
 }
 
 .ser-sin-resolved .resolved-else {
@@ -13081,10 +13060,6 @@ span {
     margin-top: -140px;
   }
 }
-.te-resolved .resolved__wrapp {
-  padding-bottom: 0;
-}
-
 .te-mission {
   overflow: visible;
 }
@@ -13102,10 +13077,6 @@ span {
 .te-mission .mission__wrapp .mission-bg-img {
   top: -624px;
   z-index: 0;
-}
-
-.te-minimum .minimum__wrapp {
-  padding-bottom: 0;
 }
 
 .te-lawyers .lawyers__wrapp {
