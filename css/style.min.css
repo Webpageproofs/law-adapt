@@ -2267,6 +2267,7 @@ textarea:focus::placeholder {
 }
 
 .btn-main {
+  font-family: "Inter";
   position: relative;
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#49a0c1+0,347d98+100 */
   background: linear-gradient(to bottom, rgb(73, 160, 193) 0%, rgb(52, 125, 152) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -14263,6 +14264,7 @@ span {
   .case-cont {
     padding: 30px;
     padding-right: 60px;
+    margin-bottom: 50px;
   }
 }
 @media (max-width: 1366px) {
@@ -14274,6 +14276,11 @@ span {
 @media (max-width: 1100px) {
   .case-cont {
     padding: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .case-cont {
+    margin-bottom: 30px;
   }
 }
 @media (max-width: 576px) {
@@ -14464,13 +14471,33 @@ span {
 }
 .case-box-r .btn-main {
   margin-bottom: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-@media (max-width: 1500px) {
+@media (max-width: 1600px) {
   .case-box-r .btn-main {
-    padding: 17px 20px;
+    margin-bottom: 50px;
+    padding: 19px 17px;
+    border-radius: 10px;
   }
 }
+@media (max-width: 1366px) {
+  .case-box-r .btn-main {
+    margin-bottom: 30px;
+    font-size: 12px;
+  }
+  .case-box-r .btn-main .btn-main-img {
+    width: 15px;
+    margin-right: 10px;
+  }
+}
+@media (max-width: 1190px) {
+  .case-box-r .btn-main {
+    font-size: 11px;
+  }
+}
+
 .case-box-r .btn-white {
   font-family: "Inter";
   font-weight: 500;
@@ -14518,6 +14545,7 @@ span {
   .case-author {
     padding: 30px;
     padding-top: 20px;
+    margin-bottom: 50px;
   }
   .case-author h2 {
     margin-bottom: 20px;
@@ -14527,11 +14555,17 @@ span {
   .case-author {
     padding: 20px;
     padding-top: 10px;
+    margin-bottom: 30px;
   }
 }
 
-.case-author h3 {
+.case-author h2 {
   margin-bottom: 20px;
+}
+@media (max-width: 1600px) {
+  .case-author h2 {
+    margin-bottom: 10px;
+  }
 }
 
 .case-author-point {
@@ -14567,23 +14601,9 @@ span {
 .case-author-point__text h4 {
   font-weight: 700;
   margin-bottom: 15px;
+  font-size: 20px;
 }
 
-@media (max-width: 767px) {
-  .case-author-point__text h4 {
-    font-size: calc(12px + 13.6 * (100vw - 320px) / 1600);
-  }
-}
-@media (min-width: 767px) {
-  .case-author-point__text h4 {
-    font-size: calc(12px + 0.5vw);
-  }
-}
-@media (min-width: 1600px) {
-  .case-author-point__text h4 {
-    font-size: 20px;
-  }
-}
 .case-author-point__text ul {
   font-family: "Inter";
   padding-left: 20px;
@@ -14663,12 +14683,12 @@ span {
   align-items: center;
   margin-bottom: 30px;
 }
-
 @media (max-width: 576px) {
   .case-num-date {
-    flex-wrap: wrap;
+    margin-bottom: 10px;
   }
 }
+
 .case-num-date .span-data {
   display: inline-block;
   padding: 15px 30px;
@@ -14679,36 +14699,29 @@ span {
 }
 
 @media (max-width: 767px) {
-  .case-num-date .span-data {
+  .case-num-date .span-data, .case-num-date .btn-white {
     font-size: calc(14px + 3.4 * (100vw - 320px) / 1600);
   }
 }
 @media (min-width: 767px) {
-  .case-num-date .span-data {
+  .case-num-date .span-data, .case-num-date .btn-white {
     font-size: calc(14px + 0.125vw);
   }
 }
 @media (min-width: 1600px) {
-  .case-num-date .span-data {
+  .case-num-date .span-data, .case-num-date .btn-white {
     font-size: 16px;
   }
 }
 @media (max-width: 576px) {
-  .case-num-date .span-data {
+  .case-num-date .span-data, .case-num-date .btn-white {
     text-align: center;
-    width: 100%;
     margin-right: 0;
-    margin-bottom: 20px;
-  }
-}
-.case-num-date .btn-white {
-  padding: 15px 30px;
-  border-radius: 12px;
-}
-
-@media (max-width: 576px) {
-  .case-num-date .btn-white {
-    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 13px;
+    font-size: 12px;
+    border-radius: 10px;
+    margin-right: 15px;
   }
 }
 .case-num-date .btn-white:hover {
@@ -14721,6 +14734,21 @@ span {
   font-weight: 500;
   margin-bottom: 50px;
 }
+@media (max-width: 1600px) {
+  .case-dir {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 990px) {
+  .case-dir {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .case-dir {
+    margin-bottom: 15px;
+  }
+}
 
 @media (max-width: 767px) {
   .case-dir {
@@ -14737,16 +14765,26 @@ span {
     font-size: 16px;
   }
 }
-@media (max-width: 576px) {
-  .case-dir {
-    margin-bottom: 30px;
-  }
-}
 .case-ttl {
   font-weight: 700;
   line-height: 120%;
   margin-bottom: 60px;
   color: #347d98;
+}
+@media (max-width: 1600px) {
+  .case-ttl {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 990px) {
+  .case-ttl {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .case-ttl {
+    margin-bottom: 15px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -14764,22 +14802,29 @@ span {
     font-size: 45px;
   }
 }
-@media (max-width: 576px) {
-  .case-ttl {
-    margin-bottom: 30px;
-  }
-}
 .case-item {
   border-bottom: 2px dashed rgba(255, 255, 255, 0.3);
   padding-bottom: 30px;
   margin-bottom: 60px;
 }
-
-@media (max-width: 900px) {
+@media (max-width: 1600px) {
   .case-item {
+    padding-bottom: 20px;
     margin-bottom: 30px;
   }
 }
+@media (max-width: 990px) {
+  .case-item {
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .case-item {
+    margin-bottom: 15px;
+  }
+}
+
 .case-item > span h3,
 .case-item > h3 {
   font-weight: 700;
@@ -14964,6 +15009,16 @@ span {
 .case-item-ttx p:not(:last-child) {
   margin-bottom: 20px;
 }
+@media (max-width: 990px) {
+  .case-item-ttx p:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .case-item-ttx p:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
 
 .case-adv {
   display: flex;
@@ -15026,6 +15081,11 @@ span {
   font-weight: 400;
   font-family: "Inter";
 }
+@media (max-width: 1366px) {
+  .case-adv-box h4 {
+    margin-bottom: 15px;
+  }
+}
 
 .case-adv-box .case-dir {
   margin-bottom: 10px;
@@ -15037,6 +15097,11 @@ span {
   margin-bottom: 25px;
   flex: 1 1 auto;
   width: 584px;
+}
+@media (max-width: 1366px) {
+  .case-adv-box > p {
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -15082,15 +15147,21 @@ span {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,dadff0+100 */
   background: linear-gradient(to bottom, #ffffff 0%, #dadff0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
-
-@media (max-width: 630px) {
+@media (max-width: 1600px) {
   .case-res {
-    flex-wrap: wrap;
+    margin-bottom: 50px;
   }
 }
 @media (max-width: 576px) {
   .case-res {
+    margin-bottom: 30px;
     padding: 20px 15px;
+  }
+}
+
+@media (max-width: 630px) {
+  .case-res {
+    flex-wrap: wrap;
   }
 }
 .case-res-ttx {
@@ -15107,6 +15178,11 @@ span {
 .case-res-ttx h2 {
   margin-bottom: 20px;
   color: #347d98;
+}
+@media (max-width: 1366px) {
+  .case-res-ttx h2 {
+    margin-bottom: 15px;
+  }
 }
 
 .case-res-ttx p {
@@ -15528,9 +15604,14 @@ span {
   margin-bottom: 80px;
 }
 
-@media (max-width: 630px) {
+@media (max-width: 1600px) {
   .case-video {
     margin-bottom: 50px;
+  }
+}
+@media (max-width: 576px) {
+  .case-video {
+    margin-bottom: 30px;
   }
 }
 .case-video .write-item-play {
@@ -16419,6 +16500,16 @@ span {
     font-size: 23px;
   }
 }
+.case-box {
+  position: relative;
+}
+.case-box > img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
 .case-box__wrapp {
   position: relative;
 }
@@ -16534,6 +16625,11 @@ span {
 @media (max-width: 1366px) {
   .art-info .case-ttl {
     margin-bottom: 30px;
+  }
+}
+@media (max-width: 990px) {
+  .art-info .case-ttl {
+    margin-bottom: 20px;
   }
 }
 
