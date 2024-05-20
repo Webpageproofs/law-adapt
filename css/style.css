@@ -14697,7 +14697,9 @@ span {
   border-radius: 12px;
   margin-right: 30px;
 }
-
+.case-num-date .btn-white{
+	padding: 15px 30px;
+}
 @media (max-width: 767px) {
   .case-num-date .span-data, .case-num-date .btn-white {
     font-size: calc(14px + 3.4 * (100vw - 320px) / 1600);
@@ -16185,8 +16187,13 @@ span {
   padding-bottom: 36px;
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(40px);
+ 
 }
-
+@media (max-width: 1600px){
+	.formation-item {
+		padding-bottom: 25px;
+	}
+}
 .num-note-name {
   display: flex;
   align-items: center;
