@@ -691,8 +691,8 @@
 	border-radius: 20px; /* закругления плашки */
 	border: 10px solid #fff; /* в ширину width: 21.5px; вхоит border*/
 }
-@media (max-width: 1250px){
-	.menu-cat-sub-left-wr{
+@media (max-width: 1250px) {
+	.menu-cat-sub-left-wr {
 		padding-right: 7px;
 	}
 	.menu-cat-sub-left-wr::-webkit-scrollbar-track {
@@ -2520,7 +2520,7 @@ textarea:focus::placeholder {
 	transition: all 0.3s ease 0s;
 	border-radius: 100%;
 }
-@media (max-width: 1366px){
+@media (max-width: 1366px) {
 	.main-nav-box .menu__li a {
 		width: 50px;
 		height: 50px;
@@ -12584,22 +12584,25 @@ span {
 .lawyers-sin-ser .owl-carousel .owl-stage {
 	display: flex;
 }
-.support, .ser-bis-co-news{
+.support,
+.ser-bis-co-news {
 	position: relative;
 }
-.support>img, .ser-bis-co-news>img{
-position: absolute;
-left: 0;
-bottom: -198px;
-width: 350px;
-z-index: -1;
+.support > img,
+.ser-bis-co-news > img {
+	position: absolute;
+	left: 0;
+	bottom: -198px;
+	width: 350px;
+	z-index: -1;
 }
-.ser-bis-co-news>img{
+.ser-bis-co-news > img {
 	bottom: auto;
 	top: -305px;
 }
-@media (max-width: 576px){
-	.support>img, .ser-bis-co-news>img{
+@media (max-width: 576px) {
+	.support > img,
+	.ser-bis-co-news > img {
 		width: 150px;
 	}
 }
@@ -14716,18 +14719,17 @@ z-index: -1;
     scrollbar-width: none;  Firefox */
 	max-height: calc(100vh - 1rem);
 	overflow-y: auto;
-
 }
-.case-box-r-wr::-webkit-scrollbar{
+.case-box-r-wr::-webkit-scrollbar {
 	width: 5px;
 }
-.case-box-r-wr::-webkit-scrollbar-track{
+.case-box-r-wr::-webkit-scrollbar-track {
 	background: #343b51; /* цвет дорожки */
 }
-.case-box-r-wr::-webkit-scrollbar-thumb{
+.case-box-r-wr::-webkit-scrollbar-thumb {
 	background-color: rgba(58, 59, 68, 0.6); /* цвет плашки */
-		border-radius: 20px; /* закругления плашки */
-		border: 1px solid #343b51; /* в ширину width: 21.5px; вхоит border*/
+	border-radius: 20px; /* закругления плашки */
+	border: 1px solid #343b51; /* в ширину width: 21.5px; вхоит border*/
 }
 .case-author {
 	margin-top: 30px;
@@ -16207,7 +16209,11 @@ z-index: -1;
 	margin: 0 -15px;
 	margin-bottom: 30px;
 }
-
+@media (max-width: 576px) {
+	.testim-row-bottom {
+		margin-bottom: 0;
+	}
+}
 .testim-row-bottom .write-col {
 	flex: 0 1 50%;
 	max-width: 50%;
@@ -16227,8 +16233,9 @@ z-index: -1;
 	padding-bottom: 35px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 576px) {
 	.testim-row-bottom .write-col .write-item {
+		padding: 15px;
 		padding-bottom: 20px;
 	}
 }
@@ -17412,6 +17419,12 @@ z-index: -1;
 		border-radius: 20px;
 	}
 }
+@media (max-width: 576px) {
+	.art-contact {
+		padding: 20px 15px;
+		border-radius: 20px;
+	}
+}
 .desc-art-name {
 	width: 485px;
 	margin-right: 40px;
@@ -17428,6 +17441,7 @@ z-index: -1;
 		margin-bottom: 30px;
 	}
 }
+
 @media (max-width: 767px) {
 	.desc-art-name {
 		font-size: calc(14px + 13.6 * (100vw - 320px) / 1600);
@@ -17446,7 +17460,22 @@ z-index: -1;
 .desc-art-name p:not(:last-child) {
 	margin-bottom: 20px;
 }
-
+@media (max-width: 990px) {
+	.desc-art-name {
+		margin-bottom: 20px;
+	}
+	.desc-art-name p:not(:last-child) {
+		margin-bottom: 15px;
+	}
+}
+@media (max-width: 767px) {
+	.desc-art-name {
+		margin-bottom: 10px;
+	}
+	.desc-art-name p:not(:last-child) {
+		margin-bottom: 10px;
+	}
+}
 .desc-art-name a {
 	transition: all 0.3s ease 0s;
 }
@@ -17466,7 +17495,16 @@ z-index: -1;
 	margin-bottom: 26px;
 	margin-right: 0;
 }
-
+@media (max-width: 990px) {
+	.desc-art-sb .header-social {
+		margin-bottom: 20px;
+	}
+}
+@media (max-width: 767px) {
+	.desc-art-sb .header-social {
+		margin-bottom: 15px;
+	}
+}
 .desc-art-sb .header-social .menu__li {
 	width: 70px;
 	height: 70px;
@@ -17606,6 +17644,9 @@ z-index: -1;
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
+	.art-connection-point {
+		padding-top: 90px;
+	}
 }
 .art-connection-point > img {
 	position: absolute;
@@ -17613,7 +17654,7 @@ z-index: -1;
 	right: 0;
 }
 @media (max-width: 1100px) {
-	.art-connection-point > img {
+	.news-connection.art-connection .art-connection-point > img {
 		top: -90px;
 	}
 }
@@ -17638,7 +17679,11 @@ z-index: -1;
 		font-size: 16px;
 	}
 }
-
+@media (max-width: 680px) {
+	.art-connection-point-name {
+		margin-bottom: 20px;
+	}
+}
 .art-connection-point-name p:not(:last-child) {
 	margin-bottom: 20px;
 }
